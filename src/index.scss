@@ -1,0 +1,70 @@
+@import "./design-tokens/scss-variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-text;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: darken($accent-color, 20%);
+    transition-duration: 0.05s;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  background-color: #61c7b3;
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($accent-color, 20%);
+    transition-duration: 0.05s;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.btn__container {
+  .btn {
+    margin-right: 5px;
+  }
+  .btn:last-child {
+    margin: 0;
+  }
+}
+
+.formControl {
+  border: 1px solid #d4d4d4;
+  padding: 10px;
+  display: flex;
+  border-radius: 2px;
+  select,
+  input {
+    cursor: pointer;
+    min-width: 150px;
+    border: none;
+    background: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}

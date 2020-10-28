@@ -1,0 +1,52 @@
+@import "../../design-tokens/scss-variables.scss";
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: $sidebar-width;
+  padding: $sidebar-padding;
+  background: $sidebar-background;
+  transition-duration: 0.3s;
+  z-index: 5;
+  padding-top: 50px;
+  .sidebar__navContainer {
+    list-style: none;
+
+    .sidebar__navLink {
+      margin-bottom: 25px;
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 9px;
+        transition-duration: 0.3s;
+        color: #fff;
+
+        &:hover {
+          background-color: lighten($sidebar-background, 5%);
+          .sidebar__navIcon {
+            transform: scale(1.06);
+          }
+        }
+
+        &.active {
+          color: $accent-color;
+        }
+
+        .sidebar__navIcon {
+          max-width: 40px;
+          margin-bottom: 10px;
+          transition-duration: 0.3s;
+        }
+        .sidebar__navLinktext {
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          font-size: 0.55rem;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}

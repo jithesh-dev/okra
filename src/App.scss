@@ -1,0 +1,17 @@
+@import "./design-tokens/scss-variables.scss";
+.app {
+  position: relative;
+}
+.main {
+  background-color: #eee;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: $sidebar-width;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+  padding: 50px 60px;
+  box-shadow: inset 4px 0 0 $color-light-grey,
+    inset 5px 0 0 darken($color-light-grey, 5%);
+}

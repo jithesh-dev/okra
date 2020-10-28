@@ -1,0 +1,33 @@
+@import "../../design-tokens/scss-variables.scss";
+
+.dashboard__title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: $color-text;
+  text-transform: uppercase;
+}
+
+.dashboard_header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 50px;
+  .dashboard__filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    .formControl {
+      margin-right: 10px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  .data__counter {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+}
