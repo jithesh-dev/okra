@@ -1,5 +1,6 @@
 .suggestionsTable {
   width: 100%;
+  max-width: 1600px;
   margin-top: 50px;
   font-size: 0.9rem;
   border-collapse: collapse;
@@ -9,14 +10,14 @@
       font-weight: 700;
     }
   }
-  tbody {
-    tr {
-      height: 60px;
-      border-bottom: 1px solid #dadada;
-    }
-  }
 }
 
 .expand-btn {
   cursor: pointer;
+
+  &:hover {
+  }
+  &.reverse {
+    transform: rotate(180deg);
+  }
 }

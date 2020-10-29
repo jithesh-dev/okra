@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "./suggestionsRow.styles.scss";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function SuggestionsRow({
@@ -10,26 +11,38 @@ function SuggestionsRow({
   target,
   reason,
 }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <tr>
+      <tr className="suggestionsRow">
         <td>
           <input type="checkbox" />
         </td>
         <td>{priority}</td>
         <td>{contact}</td>
         <td>{suggestion}</td>
-        <td></td>
+        <td>{isOpen.toString()}</td>
         <td>{revenue}</td>
-        <td>{access}</td>
+        <td>
+          <span className={`access ${access}`}>{access}</span>
+        </td>
         <td>{target}</td>
         <td>
-          <ExpandMoreIcon className="expand-btn" />
+          <span className="expand-btn ">
+            <ExpandMoreIcon
+              className={`${isOpen && "reverse"}`}
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          </span>
         </td>
       </tr>
-      <tr>
+
+      <tr className={`reasonRow ${isOpen && "active"}`}>
         <td colSpan="2"></td>
-        <td colSpan="7">{reason}</td>
+        <td colSpan="7">
+          <div className={`reasonText ${isOpen && "active"}`}>{reason}</div>
+        </td>
       </tr>
     </>
   );

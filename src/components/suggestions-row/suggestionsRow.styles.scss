@@ -1,0 +1,43 @@
+.suggestionsRow {
+  height: 60px;
+  border-bottom: 1px solid #dadada;
+  td {
+    .access {
+      display: inline-block;
+      padding: 5px;
+      min-width: 50px;
+      border-radius: 4px;
+      text-transform: capitalize;
+      text-align: center;
+      &.easy {
+        background-color: rgb(121, 207, 135);
+      }
+      &.mid {
+        background-color: rgb(235, 225, 141);
+      }
+      &.hard {
+        background-color: rgb(247, 137, 137);
+      }
+    }
+  }
+}
+
+.reasonRow {
+  font-size: 0;
+  margin: 0;
+  max-height: 0;
+  transition: max-height 0.8s ease;
+  &.active {
+    font-size: 0.8rem;
+    margin: 10px;
+    max-height: 100px;
+  }
+  //   .reasonText {
+  //     transition: 1s;
+
+  //     &.active {
+  //       line-height: 1rem;
+  //       font-size: 0.8rem;
+  //     }
+  //   }
+}
