@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./suggestionsRow.styles.scss";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import React, { useState } from 'react';
+import './suggestionsRow.styles.scss';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function SuggestionsRow({
   priority,
@@ -15,33 +15,39 @@ function SuggestionsRow({
 
   return (
     <>
-      <tr className="suggestionsRow">
+      <tr className='suggestionsRow'>
         <td>
-          <input type="checkbox" />
+          <input type='checkbox' />
         </td>
-        <td>{priority}</td>
+        <td align='center'>
+          <span className='priority__container'>
+            {[...Array(priority)].map((value: undefined, index: number) => (
+              <span key={index} className='priority__marker'></span>
+            ))}
+          </span>
+        </td>
         <td>{contact}</td>
         <td>{suggestion}</td>
-        <td>{isOpen.toString()}</td>
-        <td>{revenue}</td>
+        <td></td>
+        <td align='center'>{revenue}</td>
         <td>
           <span className={`access ${access}`}>{access}</span>
         </td>
-        <td>{target}</td>
+        <td align='center'>{target}</td>
         <td>
-          <span className="expand-btn ">
+          <span className='expand-btn '>
             <ExpandMoreIcon
-              className={`${isOpen && "reverse"}`}
+              className={`expandBtn ${isOpen && 'reverse'}`}
               onClick={() => setIsOpen(!isOpen)}
             />
           </span>
         </td>
       </tr>
 
-      <tr className={`reasonRow ${isOpen && "active"}`}>
-        <td colSpan="2"></td>
-        <td colSpan="7">
-          <div className={`reasonText ${isOpen && "active"}`}>{reason}</div>
+      <tr className={`reasonRow ${isOpen && 'active'}`}>
+        <td colSpan='2'></td>
+        <td colSpan='7'>
+          <div className='reasonText'>{reason}</div>
         </td>
       </tr>
     </>

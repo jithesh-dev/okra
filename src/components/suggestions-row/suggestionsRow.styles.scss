@@ -1,7 +1,8 @@
 .suggestionsRow {
   height: 60px;
-  border-bottom: 1px solid #dadada;
+
   td {
+    padding-top: 20px;
     .access {
       display: inline-block;
       padding: 5px;
@@ -23,21 +24,44 @@
 }
 
 .reasonRow {
-  font-size: 0;
   margin: 0;
-  max-height: 0;
-  transition: max-height 0.8s ease;
-  &.active {
-    font-size: 0.8rem;
-    margin: 10px;
-    max-height: 100px;
-  }
-  //   .reasonText {
-  //     transition: 1s;
+  height: 0;
+  opacity: 0;
+  transition: height 0.8s ease, opacity 0.7s ease;
+  border-bottom: 1px solid #dadada;
 
-  //     &.active {
-  //       line-height: 1rem;
-  //       font-size: 0.8rem;
-  //     }
-  //   }
+  &.active {
+    opacity: 1;
+    margin: 10px;
+    height: 100px;
+  }
+  .reasonText {
+    font-weight: 800;
+    font-style: italic;
+    color: #b73c3c;
+  }
+}
+.priority__container {
+  display: flex;
+  padding-left: 5px;
+  align-items: center;
+  height: 20px;
+  width: 70px;
+  border: 1px solid red;
+  border-radius: 12px;
+  .priority__marker {
+    margin: 1px;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #ff970c;
+    border-radius: 50%;
+  }
+}
+
+.expandBtn {
+  transition: transform 1s ease;
+  &.reverse {
+    transform: rotate(180deg);
+  }
 }

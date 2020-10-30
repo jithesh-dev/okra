@@ -1,8 +1,8 @@
-import React from "react";
-import CancelIcon from "@material-ui/icons/Cancel";
+import React from 'react';
+import CancelIcon from '@material-ui/icons/Cancel';
 
-import "./suggestionsTable.styles.scss";
-import SuggestionsRow from "../suggestions-row";
+import './suggestionsTable.styles.scss';
+import SuggestionsRow from '../suggestions-row';
 
 const priority = {
   High: 5,
@@ -13,13 +13,13 @@ const priority = {
 
 function SuggestionsTable({ data }) {
   return (
-    <table className="suggestionsTable">
+    <table className='suggestionsTable'>
       <thead>
         <tr>
           <td>
             <CancelIcon />
           </td>
-          <td>Priority</td>
+          <td align='center'>Priority</td>
           <td>Contact</td>
           <td>Suggestion</td>
           <td>Confidence</td>
@@ -33,38 +33,15 @@ function SuggestionsTable({ data }) {
       <tbody>
         {data.map((item) => (
           <SuggestionsRow
-            key={item["index"]}
-            priority={priority[item["Priority"]]}
-            contact={item["Contact"]}
-            suggestion={item["Suggestion"]}
-            revenue={item["Potential revenue"]}
-            access={item["Access"]}
-            target={item["Target?"]}
-            reason={item["Reason"]}
+            key={item['index']}
+            priority={priority[item['Priority']]}
+            contact={item['Contact']}
+            suggestion={item['Suggestion']}
+            revenue={item['Potential revenue']}
+            access={item['Access']}
+            target={item['Target?']}
+            reason={item['Reason']}
           />
-
-          // <React.Fragment key={item["index"]}>
-
-          //   <tr>
-          //     <td>
-          //       <input type="checkbox" />
-          //     </td>
-          //     <td>{priority[item["Priority"]]}</td>
-          //     <td>{item["Contact"]}</td>
-          //     <td>{item["Suggestion"]}</td>
-          //     <td></td>
-          //     <td>{item["Potential revenue"]}</td>
-          //     <td>{item["Access"]}</td>
-          //     <td>{item["Target?"]}</td>
-          //     <td>
-          //       <ExpandMoreIcon className="expand-btn" />
-          //     </td>
-          //   </tr>
-          //   {/* <tr>
-          //     <td colSpan="2"></td>
-          //     <td colSpan="7">{item["Reason"]}</td>
-          //   </tr> */}
-          // </React.Fragment>
         ))}
       </tbody>
     </table>
