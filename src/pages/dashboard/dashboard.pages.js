@@ -4,6 +4,7 @@ import "./dashboard.styles.scss";
 import { data } from "../../data/recommendations-michael.json";
 
 function Dashboard() {
+  console.log(Object.keys(data).length);
   return (
     <div className="dashboard">
       <h1 className="dashboard__title">Your Suggestions</h1>
@@ -43,7 +44,9 @@ function Dashboard() {
             </select>
           </div>
         </div>
-        <p className="data__counter">112 Total</p>
+        <p className="data__counter">
+          {data && Object.keys(data).length + " Total"}
+        </p>
         <div className="btn__container">
           <button className="btn btn__primary">Print</button>
           <button className="btn btn__primary">Export</button>

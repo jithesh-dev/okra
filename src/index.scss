@@ -1,4 +1,4 @@
-@import './design-tokens/scss-variables.scss';
+@import "./design-tokens/scss-variables.scss";
 
 * {
   box-sizing: border-box;
@@ -7,8 +7,8 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
   font-weight: 400;
   color: $color-text;
 }
@@ -49,6 +49,30 @@ a {
   }
   .btn:last-child {
     margin: 0;
+  }
+}
+
+.btn-icn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 0.8em;
+    height: 0.8em;
+  }
+  &:hover {
+    background-color: #dadada;
+    transition-duration: 0.05s;
+  }
+  &:focus {
+    outline: none;
   }
 }
 

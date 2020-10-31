@@ -11,7 +11,7 @@ function Sidebar() {
     <div className="sidebar">
       <ul className="sidebar__navContainer">
         <li className="sidebar__navLink">
-          <Link to="/suggestions" className="active">
+          <Link to="/" className="active">
             <img src={suggestionsIcon} alt="" className="sidebar__navIcon" />
             <span className="sidebar__navLinktext">Suggestions</span>
           </Link>

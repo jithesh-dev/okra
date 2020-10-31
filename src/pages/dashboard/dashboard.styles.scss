@@ -1,4 +1,4 @@
-@import '../../design-tokens/scss-variables.scss';
+@import "../../design-tokens/scss-variables.scss";
 
 .dashboard__title {
   font-size: 3rem;
@@ -15,9 +15,9 @@
   padding: 20px;
   border-radius: 5px;
   margin-top: 50px;
-  .formControl {
-    font-size: 0.7rem;
-  }
+  // .formControl {
+  //   font-size: 0.7rem;
+  // }
   .dashboard__filterContainer {
     display: flex;
     flex-wrap: wrap;
