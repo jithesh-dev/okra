@@ -11,10 +11,10 @@
       text-transform: capitalize;
       text-align: center;
       &.easy {
-        background-color: rgb(121, 207, 135);
+        background-color: #c0e2c6;
       }
       &.mid {
-        background-color: rgb(235, 225, 141);
+        background-color: #cebdb0;
       }
       &.hard {
         background-color: rgb(247, 137, 137);
@@ -59,9 +59,18 @@
   }
 }
 
-.expandBtn {
-  transition: transform 1s ease;
-  &.reverse {
+.expand-btn {
+  transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  width: 35px;
+  justify-content: center;
+  height: 35px;
+  border-radius: 50%;
+  .reverse {
     transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: #dadada;
   }
 }

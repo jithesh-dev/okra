@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './suggestionsRow.styles.scss';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import CheckIcon from '@material-ui/icons/Check';
+import CloseIcon from '@material-ui/icons/Close';
 
 function SuggestionsRow({
   priority,
@@ -10,13 +12,14 @@ function SuggestionsRow({
   access,
   target,
   reason,
+  messaging,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <tr className='suggestionsRow'>
-        <td>
+        <td align='center'>
           <input type='checkbox' />
         </td>
         <td align='center'>
@@ -28,12 +31,15 @@ function SuggestionsRow({
         </td>
         <td>{contact}</td>
         <td>{suggestion}</td>
-        <td></td>
+        <td align='center'>
+          {target == 'yes' ? <CheckIcon /> : <CloseIcon />}
+        </td>
+        <td align='center'>{messaging}</td>
         <td align='center'>{revenue}</td>
         <td>
           <span className={`access ${access}`}>{access}</span>
         </td>
-        <td align='center'>{target}</td>
+
         <td>
           <span className='expand-btn '>
             <ExpandMoreIcon

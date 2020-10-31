@@ -16,16 +16,17 @@ function SuggestionsTable({ data }) {
     <table className='suggestionsTable'>
       <thead>
         <tr>
-          <td>
+          <td align='center'>
             <CancelIcon />
           </td>
           <td align='center'>Priority</td>
           <td>Contact</td>
           <td>Suggestion</td>
-          <td>Confidence</td>
-          <td>Earning Potential</td>
+          <td align='center'>Target</td>
+          <td align='center'>Messaging</td>
+          <td align='center'>Earning Potential</td>
           <td>Access</td>
-          <td>Target Status</td>
+
           <td>Why?</td>
         </tr>
       </thead>
@@ -41,6 +42,7 @@ function SuggestionsTable({ data }) {
             access={item['Access']}
             target={item['Target?']}
             reason={item['Reason']}
+            messaging={item['Messaging']}
           />
         ))}
       </tbody>
