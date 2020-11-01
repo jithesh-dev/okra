@@ -7,7 +7,7 @@ function Dashboard() {
   console.log(Object.keys(data).length);
   return (
     <div className="dashboard">
-      <h1 className="dashboard__title">Your Suggestions</h1>
+      <h1 className="page__title">Your Suggestions</h1>
       <div className="dashboard_header">
         <div className="formControl">
           <select name="">

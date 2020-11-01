@@ -13,15 +13,9 @@ import {
 } from "recharts";
 
 const SalesQuarter = () => {
-  console.log(data);
   return (
     <div className="salesquarter">
-      <LineChart
-        width={600}
-        height={300}
-        data={data}
-        margin={{ top: 5, right: 0, left: 20, bottom: 5 }}
-      >
+      <LineChart width={600} height={300} data={data}>
         <XAxis dataKey="Quarter" />
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />

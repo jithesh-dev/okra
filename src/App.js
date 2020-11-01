@@ -11,11 +11,11 @@ function App() {
         <Sidebar />
         <div className="main">
           <Switch>
-            <Route exact path="/reports">
-              <ReportsPage />
-            </Route>
-            <Route exact path="/">
+            <Route exact={true} path="/">
               <Dashboard />
+            </Route>
+            <Route path="/reports">
+              <ReportsPage />
             </Route>
           </Switch>
         </div>

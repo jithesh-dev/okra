@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './suggestionsRow.styles.scss';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CheckIcon from '@material-ui/icons/Check';
-import CloseIcon from '@material-ui/icons/Close';
+import React, { useState } from "react";
+import "./suggestionsRow.styles.scss";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import CheckIcon from "@material-ui/icons/Check";
+import CloseIcon from "@material-ui/icons/Close";
 
 function SuggestionsRow({
   priority,
@@ -18,42 +18,42 @@ function SuggestionsRow({
 
   return (
     <>
-      <tr className='suggestionsRow'>
-        <td align='center'>
-          <input type='checkbox' />
+      <tr className="suggestionsRow">
+        <td align="center">
+          <input type="checkbox" />
         </td>
-        <td align='center'>
-          <span className='priority__container'>
+        <td align="center">
+          <span className="priority__container">
             {[...Array(priority)].map((value: undefined, index: number) => (
-              <span key={index} className='priority__marker'></span>
+              <span key={index} className="priority__marker"></span>
             ))}
           </span>
         </td>
         <td>{contact}</td>
         <td>{suggestion}</td>
-        <td align='center'>
-          {target == 'yes' ? <CheckIcon /> : <CloseIcon />}
+        <td align="center">
+          {target === "yes" ? <CheckIcon /> : <CloseIcon />}
         </td>
-        <td align='center'>{messaging}</td>
-        <td align='center'>{revenue}</td>
+        <td align="center">{messaging}</td>
+        <td align="center">{revenue}</td>
         <td>
           <span className={`access ${access}`}>{access}</span>
         </td>
 
         <td>
-          <span className='expand-btn '>
+          <span className="expand-btn ">
             <ExpandMoreIcon
-              className={`expandBtn ${isOpen && 'reverse'}`}
+              className={`expandBtn ${isOpen && "reverse"}`}
               onClick={() => setIsOpen(!isOpen)}
             />
           </span>
         </td>
       </tr>
 
-      <tr className={`reasonRow ${isOpen && 'active'}`}>
-        <td colSpan='2'></td>
-        <td colSpan='7'>
-          <div className='reasonText'>{reason}</div>
+      <tr className={`reasonRow ${isOpen && "active"}`}>
+        <td colSpan="2"></td>
+        <td colSpan="7">
+          <div className="reasonText">{reason}</div>
         </td>
       </tr>
     </>

@@ -1,0 +1,13 @@
+@import "../../design-tokens/scss-variables.scss";
+.pagination {
+  display: flex;
+  margin: 15px 0;
+
+  .page-link {
+    margin: 0 5px;
+    &.active {
+      color: $accent-color;
+      font-weight: 600;
+    }
+  }
+}
