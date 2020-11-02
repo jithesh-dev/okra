@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./salesquarter.scss";
 import { data } from "../../../data/sales-michael.json";
 
 import {
